@@ -1,0 +1,5 @@
+flask>=3
+reportlab>=4
+requests>=2.31
+gunicorn>=22
+pytest>=8

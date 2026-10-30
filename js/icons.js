@@ -1,0 +1,37 @@
+/* Inline SVG icon set (stroke icons, inherit colour via currentColor). Use ICO('name',size) in JS or <span data-i="name" data-s="24"></span> in HTML. */
+const ICONS={
+milk:'<path d="M7 3h10l-1.2 16.2a2 2 0 0 1-2 1.8h-3.6a2 2 0 0 1-2-1.8z"/><path d="M7.6 9h8.8"/>',
+bowl:'<path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M8 20.5h8"/><path d="M8 7c0-1.5 1.5-1.5 1.5-3M12 7c0-1.5 1.5-1.5 1.5-3"/>',
+cheese:'<path d="M2 17l10-11 10 4v7z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="13" r="1"/>',
+butter:'<path d="M3 10l3-4h12l3 4v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 10h18"/>',
+jar:'<rect x="5" y="8" width="14" height="13" rx="2"/><path d="M7 8V5h10v3"/><path d="M5 13h14"/>',
+cup:'<path d="M6 5h12l-1.5 15h-9z"/><path d="M12 5l2-3"/>',
+icecream:'<path d="M7 11a5 5 0 0 1 10 0z"/><path d="M7 11l5 11 5-11"/>',
+cart:'<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/>',
+bag:'<path d="M5 8h14l-1 13H6z"/><path d="M9 8a3 3 0 0 1 6 0"/>',
+bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a2 2 0 0 0 3.4 0"/>',
+menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+close:'<path d="M6 6l12 12M18 6L6 18"/>',
+up:'<path d="M12 19V5M5 12l7-7 7 7"/>',
+chat:'<path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/>',
+pin:'<path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+receipt:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>',
+cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+cal7:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>',
+calm:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h8M8 17.5h5"/>',
+sparkle:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17v4M17 19h4"/>',
+search:'<circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/>',
+truck:'<path d="M2 6h11v10H2zM13 9h4l4 4v3h-8"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/>',
+card:'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>',
+book:'<path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M4 17a3 3 0 0 1 3-3h12"/>',
+heart:'<path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/>',
+leaf:'<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-5 6-8 10-10"/>',
+shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+flask:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/>',
+factory:'<path d="M3 21V10l6 4v-4l6 4V6h6v15z"/>',
+snow:'<path d="M12 2v20M4 7l16 10M20 7L4 17"/>',
+box:'<path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/>',
+lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'};
+const ICO=(n,s=20)=>`<svg class="ico" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]||ICONS.bag}</svg>`;
+function hydrateIcons(){document.querySelectorAll('[data-i]').forEach(e=>{if(!e.firstChild)e.innerHTML=ICO(e.dataset.i,+e.dataset.s||20)})}
+document.addEventListener('DOMContentLoaded',hydrateIcons);

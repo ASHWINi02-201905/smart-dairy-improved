@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Products – Daily Dairy Needs</title><meta name="description" content="Browse and order dairy products.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Daily Dairy Needs"><meta property="og:image" content="assets/img/icon-512.png"><meta name="theme-color" content="#0b2a24"><link rel="icon" href="assets/img/favicon.png"><link rel="apple-touch-icon" href="assets/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css"><link rel="stylesheet" href="css/theme.css"></head><body><div id="hdr"></div>
+<section class="phead"><h1>Our products</h1><p>Search, filter and order what you need.</p></section>
+<section id="shop"><h2>Our products</h2><div class="tools"><select id="cf" onchange="cat=this.value;pg=0;draw()"></select>
+<select onchange="sort=this.value;draw()"><option value="">Sort</option><option value="p">Price: low to high</option><option value="n">Name</option></select>
+<label>Max price <input id="mp" type="number" min="0" placeholder="any" oninput="pg=0;draw()" style="width:90px"></label></div>
+<div class="pg" id="pl"></div><p id="pp"></p></section><section id="new"><h2>New arrivals</h2><div class="pg" id="np"></div><p><a href="#shop" onclick="cat='';q='';draw()">View all products</a></p></section><div id="ftr"></div>
+<script src="js/icons.js"></script><script src="js/images.js"></script><script src="js/cats.js"></script><script src="js/layout.js"></script><script src="js/seed.js"></script><script src="js/site.js"></script><script src="js/pages.js"></script></body></html>

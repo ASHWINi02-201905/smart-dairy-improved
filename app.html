@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Dairy Needs – Smart Dairy</title>
+<link rel="icon" href="assets/img/favicon.png"><link rel="apple-touch-icon" href="assets/img/icon-192.png">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<section id="login"><form id="lf" class="card login">
+<img src="assets/img/logo.png" alt="Daily Dairy Needs" width="180">
+<h2>Sign in</h2>
+<label>Email<input id="em" type="email" required value="admin@dairy.test"></label>
+<label>Password<input id="pw" type="password" required value="admin123"></label>
+<p id="err" class="err"></p><button class="btn">Sign in</button><button type="button" class="btn" style="background:#1b5fc4" onclick="demo('admin@dairy.test','admin123');$('#lf').requestSubmit()">Enter demo (Admin)</button><a href="index.html">← Visit our website</a>
+<button type="button" class="btn ghost" style="color:#14532d;border-color:#2e9b2e" onclick="register()">New customer? Create account</button><button type="button" class="btn ghost" style="color:#14532d;border-color:#2e9b2e" onclick="forgot()">Forgot password?</button><small>Demo: <a href="#" onclick="demo('admin@dairy.test','admin123');return false">Admin</a> · <a href="#" onclick="demo('staff@dairy.test','staff123');return false">Staff</a> · <a href="#" onclick="demo('ravi@dairy.test','cust123');return false">Customer</a></small></form></section>
+<div id="app" hidden>
+<aside id="side"><a href="index.html" style="color:#fff;font-size:13px">View website</a><img src="assets/img/icon-192.png" width="64" alt="">
+<nav id="nav"></nav><button class="btn ghost" onclick="logout()">Logout</button></aside>
+<main><header><button class="burger" onclick="document.body.classList.toggle('open')" aria-label="Menu"><span class="ic" data-i="menu" data-s="24"></span></button>
+<h1 id="title"></h1></header><div id="main"></div></main></div>
+<dialog id="dlg"><form method="dialog" id="df"></form></dialog>
+<div id="toast"></div>
+<script src="js/icons.js"></script><script src="js/images.js"></script><script src="js/seed.js"></script><script src="js/app.js"></script><script src="js/portal.js"></script></body></html>
